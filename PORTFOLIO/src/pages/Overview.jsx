@@ -33,8 +33,10 @@ const Overview = () => {
             <h4>View Latest Project</h4>
           </div>
           <div className="action-card">
-            <i className="fas fa-download"></i>
-            <h4>Download Resume</h4>
+            <a href="/assets/resume.pdf" download="Arkaprava_Resume.pdf" className="resume-link">
+              <i className="fas fa-download"></i>
+              <h4>Download Resume</h4>
+            </a>
           </div>
           <div className="action-card">
             <i className="fas fa-paper-plane"></i>

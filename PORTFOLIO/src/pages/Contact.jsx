@@ -28,7 +28,7 @@ const Contact = () => {
         <div className="contact-info">
           <div className="info-item">
             <i className="fas fa-envelope"></i>
-            <p>arkapravasen2002@gmail.com</p>
+            <p>arkarickdas26@gmail.com</p>
           </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>
@@ -36,7 +36,7 @@ const Contact = () => {
           </div>
           <div className="info-item">
             <i className="fas fa-graduation-cap"></i>
-            <p>B.Tech in Computer Science</p>
+            <p>B.Tech in Computer Science & Technology</p>
           </div>
           <div className="social-links">
             <a href="https://github.com/KIRITO-AR" target="_blank" rel="noopener noreferrer">

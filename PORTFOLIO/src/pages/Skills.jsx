@@ -3,25 +3,33 @@ import './Skills.css';
 
 const Skills = () => {
   const skills = {
-    frontend: [
-      { name: 'React.js', level: 85 },
+    programming: [
       { name: 'JavaScript', level: 85 },
-      { name: 'HTML5/CSS3', level: 90 },
+      { name: 'Python', level: 80 },
+      { name: 'C', level: 75 },
+      { name: 'HTML5', level: 90 },
+      { name: 'CSS3', level: 85 },
+      { name: 'CSS3', level: 80 },
+      { name: 'React.js', level: 85 },
       { name: 'Tailwind CSS', level: 80 },
-      { name: 'Bootstrap', level: 85 }
-    ],
-    backend: [
+      { name: 'Bootstrap', level: 85 },
       { name: 'Node.js', level: 75 },
       { name: 'Express.js', level: 70 },
-      { name: 'MongoDB', level: 70 },
-      { name: 'MySQL', level: 65 }
+      { name: 'Python Flask', level: 70 },
+      
+    ],
+    databases: [
+      { name: 'MongoDB', level: 75 },
+      { name: 'MySQL', level: 70 },
+      { name: 'SQLite', level: 65 },
+      { name: 'Oracle', level: 70 }
     ],
     tools: [
-      { name: 'Git/GitHub', level: 85 },
-      { name: 'VS Code', level: 90 },
-      { name: 'Firebase', level: 75 },
-      { name: 'Postman', level: 80 },
-      { name: 'npm/yarn', level: 85 }
+      { name: 'Git', level: 80 },
+      { name: ' Vs Code ', level: 90 },
+      { name: 'GitHub', level: 75 },
+      { name: 'n8n', level: 70 },
+      { name: 'Retell', level: 70 }
     ]
   };
 
@@ -31,11 +39,14 @@ const Skills = () => {
       
       <div className="skills-container">
         <section className="skill-category">
-          <h2>Frontend Development</h2>
+          <h2><i className="fas fa-code"></i>Programming & Technologies</h2>
           <div className="skill-list">
-            {skills.frontend.map((skill, index) => (
+            {skills.programming.map((skill, index) => (
               <div key={index} className="skill-item">
-                <span className="skill-name">{skill.name}</span>
+                <span className="skill-name">
+                  <span>{skill.name}</span>
+                  <span>{skill.level}%</span>
+                </span>
                 <div className="skill-bar">
                   <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
                 </div>
@@ -45,11 +56,14 @@ const Skills = () => {
         </section>
 
         <section className="skill-category">
-          <h2>Backend Development</h2>
+          <h2><i className="fas fa-database"></i>Databases</h2>
           <div className="skill-list">
-            {skills.backend.map((skill, index) => (
+            {skills.databases.map((skill, index) => (
               <div key={index} className="skill-item">
-                <span className="skill-name">{skill.name}</span>
+                <span className="skill-name">
+                  <span>{skill.name}</span>
+                  <span>{skill.level}%</span>
+                </span>
                 <div className="skill-bar">
                   <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
                 </div>
@@ -59,11 +73,14 @@ const Skills = () => {
         </section>
 
         <section className="skill-category">
-          <h2>Tools & Technologies</h2>
+          <h2><i className="fas fa-tools"></i>Tools</h2>
           <div className="skill-list">
             {skills.tools.map((skill, index) => (
               <div key={index} className="skill-item">
-                <span className="skill-name">{skill.name}</span>
+                <span className="skill-name">
+                  <span>{skill.name}</span>
+                  <span>{skill.level}%</span>
+                </span>
                 <div className="skill-bar">
                   <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
                 </div>
