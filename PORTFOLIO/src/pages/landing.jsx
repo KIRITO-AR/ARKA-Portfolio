@@ -8,7 +8,7 @@ const Landing = () => {
   return (
     <div className="landing">
       <h1>Welcome to Arkaprava's Portfolio</h1>
-      <p>React Developer | Problem Solver | Creative Thinker</p>
+      <p>Full Stack Developer | Problem Solver | Creative Thinker| AI/ML | Automation</p>
       <button onClick={() => navigate('/dashboard')}>Go to Dashboard</button>
     </div>
   );
