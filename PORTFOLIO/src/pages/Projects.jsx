@@ -5,12 +5,32 @@ const Projects = () => {
   const projects = [
     {
       title: 'Portfolio Website',
-      description: 'A modern portfolio website built with React and Vite',
-      tech: ['React', 'Vite', 'CSS3'],
+      description: 'A modern portfolio website built with React and Vite, featuring a responsive design and interactive components.',
+      tech: ['React', 'Vite', 'CSS3', 'Font Awesome'],
       github: 'https://github.com/KIRITO-AR/ARKA-Portfolio',
       live: '#'
     },
-    // Add more projects here
+    {
+      title: 'News Web App',
+      description: 'A news application that fetches and displays news articles from various sources using News API.',
+      tech: ['React', 'News API', 'Bootstrap', 'JavaScript'],
+      github: 'https://github.com/KIRITO-AR/NEWS-APP',
+      live: '#'
+    },
+    {
+      title: 'TextUtils',
+      description: 'A text utility application with features like text transformation, word counting, and character analysis.',
+      tech: ['React', 'JavaScript', 'Bootstrap'],
+      github: 'https://github.com/KIRITO-AR/TextUtils-React',
+      live: '#'
+    },
+    {
+      title: 'iNotebook',
+      description: 'A full-stack note-taking application with user authentication and CRUD operations.',
+      tech: ['MERN Stack', 'JWT', 'Bootstrap'],
+      github: 'https://github.com/KIRITO-AR/inotebook',
+      live: '#'
+    }
   ];
 
   return (

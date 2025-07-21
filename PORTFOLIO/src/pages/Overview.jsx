@@ -6,21 +6,22 @@ const Overview = () => {
     <div className="overview">
       <section className="hero">
         <h1>Welcome to My Portfolio</h1>
-        <p className="subtitle">Full Stack Developer | React Specialist</p>
+        <p className="subtitle">Frontend Developer | React Enthusiast | Computer Science Student</p>
+        <p className="description">Passionate about creating responsive and user-friendly web applications with modern technologies.</p>
       </section>
 
       <section className="stats">
         <div className="stat-card">
           <h3>Projects Completed</h3>
-          <p className="stat-number">15+</p>
-        </div>
-        <div className="stat-card">
-          <h3>Years Experience</h3>
-          <p className="stat-number">2+</p>
+          <p className="stat-number">10+</p>
         </div>
         <div className="stat-card">
           <h3>Technologies</h3>
-          <p className="stat-number">10+</p>
+          <p className="stat-number">15+</p>
+        </div>
+        <div className="stat-card">
+          <h3>GitHub Repositories</h3>
+          <p className="stat-number">20+</p>
         </div>
       </section>
 

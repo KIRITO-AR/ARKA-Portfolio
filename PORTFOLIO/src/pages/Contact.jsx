@@ -28,25 +28,25 @@ const Contact = () => {
         <div className="contact-info">
           <div className="info-item">
             <i className="fas fa-envelope"></i>
-            <p>your.email@example.com</p>
-          </div>
-          <div className="info-item">
-            <i className="fas fa-phone"></i>
-            <p>+1 234 567 890</p>
+            <p>arkapravasen2002@gmail.com</p>
           </div>
           <div className="info-item">
             <i className="fas fa-map-marker-alt"></i>
-            <p>Your Location</p>
+            <p>Kolkata, West Bengal, India</p>
+          </div>
+          <div className="info-item">
+            <i className="fas fa-graduation-cap"></i>
+            <p>B.Tech in Computer Science</p>
           </div>
           <div className="social-links">
             <a href="https://github.com/KIRITO-AR" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/arkaprava-sen-450b19220" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
+            <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link">
+              <i className="fas fa-file-pdf"></i>
             </a>
           </div>
         </div>
