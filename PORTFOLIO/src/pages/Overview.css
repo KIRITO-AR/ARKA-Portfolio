@@ -1,17 +1,33 @@
 .overview {
-  padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 80px 4rem 2rem 4rem; /* Added top padding for fixed Topbar */
   animation: fadeIn 0.5s ease-out;
+  min-height: 100vh;
+}
+
+.overview section {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 .hero {
   text-align: center;
   margin-bottom: 3rem;
-  padding: 3rem 2rem;
+  padding: 6rem 4rem;
   background: var(--bg-gradient);
-  border-radius: 16px;
-  color: white;
+  border-radius: 24px;
+  color: var(--text-primary);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-left: auto;
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2) 0%, rgba(var(--accent-rgb), 0.1) 100%);
+  backdrop-filter: blur(10px);
 }
 
 .hero::before {
@@ -37,6 +53,7 @@
   font-size: 1.25rem;
   opacity: 0.9;
   margin-bottom: 1rem;
+  color: antiquewhite;
 }
 
 .description {
@@ -44,17 +61,110 @@
   opacity: 0.8;
   max-width: 600px;
   margin: 0 auto;
+  color: antiquewhite;
+}
+
+.about {
+  padding: 4rem;
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  margin: 2rem auto 4rem;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+}
+
+.about-content h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text {
+  color: var(--text-secondary);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.key-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.key-point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.key-point i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.image-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  box-shadow: var(--shadow-lg);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .profile-image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .image-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: -4rem 1rem 3rem 1rem;
+  gap: 2.5rem;
+  margin: -2rem 0 4rem 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: -1.5rem;
 }
 
 .stat-card {
-  background: var(--bg-secondary);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
@@ -62,6 +172,7 @@
   transition: var(--transition);
   position: relative;
   z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stat-card:hover {
@@ -79,6 +190,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   background: var(--bg-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;
@@ -90,6 +202,7 @@
   background: var(--bg-secondary);
   border-radius: 16px;
   box-shadow: var(--shadow-md);
+  margin-left: auto;
 }
 
 .quick-links h2 {
@@ -150,8 +263,10 @@
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   background: var(--bg-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0.9;
 }
 
 .action-card h4 {
@@ -162,8 +277,13 @@
 }
 
 @media (max-width: 768px) {
+  .overview {
+    padding: 72px 1rem 1rem 1rem;
+  }
+
   .hero {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    border-radius: 16px;
   }
 
   .hero h1 {
@@ -171,11 +291,21 @@
   }
 
   .stats {
-    margin: -2rem 0.5rem 2rem 0.5rem;
+    margin: -1.5rem 0 2rem 0;
+    gap: 1rem;
   }
 
   .stat-card {
     padding: 1.5rem;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+    border-radius: 16px;
+  }
+
+  .quick-links {
+    padding: 2rem 1rem;
   }
 
   .action-cards {

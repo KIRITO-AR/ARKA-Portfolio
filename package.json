@@ -1,0 +1,9 @@
+{
+  "name": "arka-portfolio-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root workspace for ARKA Portfolio",
+  "workspaces": [
+    "PORTFOLIO"
+  ]
+}

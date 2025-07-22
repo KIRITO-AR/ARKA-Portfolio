@@ -1,9 +1,11 @@
 import React from 'react';
 import './Overview.css';
+import Topbar from '../components/Topbar';
 
 const Overview = () => {
   return (
     <div className="overview">
+      <Topbar />
       <section className="hero">
         <h1>Welcome to My Portfolio</h1>
         <p className="subtitle">Frontend Developer | React Enthusiast | Computer Science Student</p>
@@ -22,6 +24,37 @@ const Overview = () => {
         <div className="stat-card">
           <h3>GitHub Repositories</h3>
           <p className="stat-number">20+</p>
+        </div>
+      </section>
+
+      <section className="about">
+        <div className="about-content">
+          <h2>About Me</h2>
+          <div className="about-grid">
+            <div className="about-text">
+              <p>Hello! I'm Arkaprava, a passionate Computer Science student and Full Stack Web Developer. I specialize in creating engaging web experiences using modern technologies like React, JavaScript, and CSS.</p>
+              <p>My journey in web development started with curiosity and has evolved into a deep passion for crafting user-friendly interfaces and solving complex problems through code.</p>
+              <div className="key-points">
+                <div className="key-point">
+                  <i className="fas fa-laptop-code"></i>
+                  <span>Frontend Development</span>
+                </div>
+                <div className="key-point">
+                  <i className="fas fa-mobile-alt"></i>
+                  <span>Responsive Design</span>
+                </div>
+                <div className="key-point">
+                  <i className="fas fa-code-branch"></i>
+                  <span>Version Control</span>
+                </div>
+              </div>
+            </div>
+            <div className="about-image">
+              <div className="image-container">
+                <img src="/assets/profile.jpg" alt="Arkaprava" className="profile-image" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
