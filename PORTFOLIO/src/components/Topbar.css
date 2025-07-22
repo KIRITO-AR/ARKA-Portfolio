@@ -1,13 +1,13 @@
 .topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center the wrapper horizontally */
   position: fixed;
   top: 0;
   left: 0;  
   width: 100%; /* Ensure topbar spans full width */
   height: 80px; /* Adjust height for better fit */
-  padding: 0 max(2rem, calc((100% - 1200px) / 2));
+  padding: 0 2rem; /* Consistent padding from screen edges */
   background-color: rgba(var(--bg-secondary-rgb), 0.7); /* Transparent background with rgba */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark theme */
   backdrop-filter: blur(10px);
@@ -15,6 +15,15 @@
   z-index: 1000;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.1); /* Subtle border */
   border-radius: 0; /* Remove rounded corners to fit full width */
+}
+
+.topbar-content-wrapper { /* New style for content wrapper */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Match the max-width of main content */
+  /* margin: 0 auto; This is implicitly handled by justify-content: center on .topbar */
 }
 
 .topbar-left h1 {

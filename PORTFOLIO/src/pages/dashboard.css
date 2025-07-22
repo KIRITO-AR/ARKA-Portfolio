@@ -100,7 +100,8 @@ body {
   flex-direction: column;
   background-color: var(--bg-primary);
   padding-top: 80px; /* Account for fixed topbar */
-  align-items: center; /* Center content within the main area */
+  /* Removed align-items: center; to allow child components to self-center */
+  width: 100%; /* Ensure it takes full width to allow child auto margins to work */
 }
 
 /* Topbar */
