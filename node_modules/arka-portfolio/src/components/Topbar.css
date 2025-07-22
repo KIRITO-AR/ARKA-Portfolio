@@ -3,8 +3,9 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  width: rem;
-  height: 120px;
+  top: 0;
+  left: 0;  
+  height: 140px;
   padding: 0 max(2rem, calc((100% - 1200px) / 2));
   background-color: rgba(var(--bg-secondary-rgb), 0.9);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
