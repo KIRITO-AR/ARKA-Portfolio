@@ -3,19 +3,6 @@ import { Link } from 'react-router-dom';
 import './Topbar.css';
 
 const Topbar = () => {
-  const [isDark, setIsDark] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme === 'dark';
-  });
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
 
   return (
     <div className="topbar">
@@ -41,9 +28,6 @@ const Topbar = () => {
         </Link>
       </nav>
       <div className="actions">
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-          <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
-        </button>
         <a href="https://github.com/KIRITO-AR" target="_blank" rel="noopener noreferrer" className="github-link">
           <i className="fab fa-github"></i>
         </a>

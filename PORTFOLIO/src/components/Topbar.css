@@ -5,15 +5,16 @@
   position: fixed;
   top: 0;
   left: 0;  
-  height: 140px;
+  width: 100%; /* Ensure topbar spans full width */
+  height: 80px; /* Adjust height for better fit */
   padding: 0 max(2rem, calc((100% - 1200px) / 2));
-  background-color: rgba(var(--bg-secondary-rgb), 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(var(--bg-secondary-rgb), 0.7); /* Transparent background with rgba */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark theme */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
-  border-radius: 30px 30px 30px 30px; /* Rounded corners for the topbar */
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1); /* Subtle border */
+  border-radius: 0; /* Remove rounded corners to fit full width */
 }
 
 .topbar-left h1 {
@@ -30,18 +31,18 @@
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1.2rem;
-  border-radius: 90%;
+  border-radius: 50%; /* Changed to 50% for circular button */
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
-  height: 140px;
+  height: 40px; /* Adjusted height to match width */
   margin-left: 0.5rem;
   }
 
 .theme-toggle:hover {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary); /* Use secondary background on hover */
   transform: scale(1.1);
 }
 
@@ -78,7 +79,7 @@
   display: flex;
   gap: 2.5rem;
   align-items: center;
-  padding: 18rem;
+  padding: 0; /* Remove excessive padding */
 }
 
 .nav-item {
@@ -91,7 +92,8 @@
   position: relative;
   transition: all 0.3s ease;
   font-size: 1rem;
-  
+  padding: 0.5rem 1rem; /* Added padding for better hover area */
+  border-radius: 8px; /* Added border-radius for nav items */
 }
 
 .nav-item:hover {
@@ -137,8 +139,8 @@
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  width: 60px;
-  height: 40px;
+  width: 40px; /* Standardized width */
+  height: 40px; /* Standardized height */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -159,6 +161,7 @@
 @media (max-width: 768px) {
   .topbar {
     padding: 1rem 2rem;
+    height: 60px; /* Adjusted height for mobile */
   }
 
   .nav-menu {

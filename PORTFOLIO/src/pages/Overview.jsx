@@ -1,11 +1,9 @@
 import React from 'react';
 import './Overview.css';
-import Topbar from '../components/Topbar';
 
 const Overview = () => {
   return (
     <div className="overview">
-      <Topbar />
       <section className="hero">
         <h1>Welcome to My Portfolio</h1>
         <p className="subtitle">Frontend Developer | React Enthusiast | Computer Science Student</p>

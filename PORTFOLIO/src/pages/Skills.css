@@ -1,6 +1,8 @@
 .skills {
-  padding: 2rem;
+  padding: 2rem 0; /* Adjusted vertical padding, removed horizontal */
   animation: fadeIn 0.5s ease-out;
+  max-width: 1200px; /* Max width for centering */
+  margin: 0 auto; /* Center the skills container */
 }
 
 .skills h1 {
@@ -14,8 +16,8 @@
 .skills-container {
   display: grid;
   gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; /* Max width for the grid itself */
+  margin: 0 auto; /* Center the grid */
 }
 
 .skill-category {
@@ -72,14 +74,14 @@
 }
 
 .skill-item {
-  background: rgba(79, 70, 229, 0.03);
+  background: rgba(79, 70, 229, 0.03); /* Adjusted for dark theme */
   padding: 1.25rem;
   border-radius: 12px;
   transition: var(--transition);
 }
 
 .skill-item:hover {
-  background: rgba(79, 70, 229, 0.06);
+  background: rgba(79, 70, 229, 0.06); /* Adjusted for dark theme */
 }
 
 .skill-name {
@@ -98,7 +100,7 @@
 
 .skill-bar {
   height: 8px;
-  background: rgba(79, 70, 229, 0.1);
+  background: rgba(79, 70, 229, 0.1); /* Adjusted for dark theme */
   border-radius: 4px;
   overflow: hidden;
 }

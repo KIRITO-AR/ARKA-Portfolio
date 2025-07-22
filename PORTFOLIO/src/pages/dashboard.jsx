@@ -10,6 +10,7 @@ import './Dashboard.css';
 const Dashboard = () => {
   return (
     <div className="dashboard">
+      <Topbar />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Overview />} />

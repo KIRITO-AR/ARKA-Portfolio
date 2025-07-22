@@ -1,7 +1,8 @@
 .overview {
   width: 100%;
-  max-width: 100%;
-  padding: 80px 4rem 2rem 4rem; /* Added top padding for fixed Topbar */
+  max-width: 1200px; /* Max width for centering */
+  padding: 40px 2rem 2rem 2rem; /* Adjusted top padding for fixed Topbar, consistent side padding */
+  margin: 0 auto; /* Center the overview content */
   animation: fadeIn 0.5s ease-out;
   min-height: 100vh;
 }
@@ -14,21 +15,17 @@
 
 .hero {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 6rem 4rem;
-  background: var(--bg-gradient);
+  margin: 2rem auto; /* Centered with vertical margin */
+  padding: 4rem 2rem; /* Adjusted padding */
+  background: rgba(17, 25, 40, 0.75); /* Adjusted for dark theme */
   border-radius: 24px;
-  color: var(--text-primary);
+  color: #ffffff;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  margin-left: auto;
-  margin-top: 80px; /* Adjusted for fixed Topbar */
-}
-
-[data-theme="dark"] .hero {
-  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2) 0%, rgba(var(--accent-rgb), 0.1) 100%);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Adjusted for dark theme */
 }
 
 .hero::before {
@@ -38,7 +35,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.2) 0%,
+    rgba(0, 212, 255, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(52, 152, 219, 0.15),
+    transparent 50%
+  );
   pointer-events: none;
 }
 
@@ -54,7 +70,7 @@
   font-size: 1.25rem;
   opacity: 0.9;
   margin-bottom: 1rem;
-  color: antiquewhite;
+  color: var(--text-secondary); /* Changed to use text-secondary variable */
 }
 
 .description {
@@ -62,14 +78,14 @@
   opacity: 0.8;
   max-width: 600px;
   margin: 0 auto;
-  color: antiquewhite;
+  color: var(--text-secondary); /* Changed to use text-secondary variable */
 }
 
 .about {
-  padding: 4rem;
+  padding: 3rem 2rem; /* Adjusted padding */
   background: var(--bg-secondary);
   border-radius: 24px;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto; /* Centered with vertical margin */
   width: 100%;
   box-shadow: var(--shadow-md);
 }
@@ -157,11 +173,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5rem;
-  margin: -2rem 0 4rem 0;
+  margin: 2rem auto; /* Centered with vertical margin */
   width: 100%;
+  max-width: 1200px; /* Match overview container width */
   position: relative;
   z-index: 1;
-  margin-top: -1.5rem;
 }
 
 .stat-card {
@@ -173,7 +189,7 @@
   transition: var(--transition);
   position: relative;
   z-index: 1;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Adjusted for dark theme */
 }
 
 .stat-card:hover {
@@ -198,12 +214,12 @@
 }
 
 .quick-links {
-  margin-top: 3rem;
-  padding: 2rem;
+  margin: 2rem auto; /* Centered with vertical margin */
+  padding: 3rem 2rem; /* Adjusted padding */
   background: var(--bg-secondary);
   border-radius: 16px;
   box-shadow: var(--shadow-md);
-  margin-left: auto;
+  width: 100%;
 }
 
 .quick-links h2 {
@@ -223,7 +239,7 @@
   background: var(--bg-secondary);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.05); /* Adjusted for dark theme */
   text-align: center;
   cursor: pointer;
   transition: var(--transition);
@@ -292,7 +308,7 @@
   }
 
   .stats {
-    margin: -1.5rem 0 2rem 0;
+    margin: 1.5rem auto; /* Adjusted margin for mobile */
     gap: 1rem;
   }
 
