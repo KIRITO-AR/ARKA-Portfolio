@@ -23,6 +23,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   margin-left: auto;
+  margin-top: 80px; /* Adjusted for fixed Topbar */
 }
 
 [data-theme="dark"] .hero {

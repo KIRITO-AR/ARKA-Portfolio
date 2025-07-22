@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -104,8 +105,8 @@ body {
 .topbar {
   background-color: var(--bg-secondary);
   padding: 1rem 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: var(--shadow-sm);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.05);
+  box-shadow: Svar(--shadow-sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,6 +115,10 @@ body {
   z-index: 10;
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.8);
+  margin-top: -7rem; /* To cover the border */
+  width: rem;
+  border-width: 2 0 6px 0;
+  
 }
 
 .topbar h1 {

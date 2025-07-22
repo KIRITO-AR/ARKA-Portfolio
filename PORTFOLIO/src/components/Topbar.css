@@ -2,20 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 6rem;
-  background-color: var(--bg-secondary);
-  box-shadow: var(--shadow-sm);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 70px;
-  z-index: 1000;
+  width: rem;
+  height: 120px;
+  padding: 0 max(2rem, calc((100% - 1200px) / 2));
+  background-color: rgba(var(--bg-secondary-rgb), 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(var(--bg-secondary-rgb), 0.85);
+  z-index: 1000;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
+  border-radius: 30px 30px 30px 30px; /* Rounded corners for the topbar */
 }
 
 .topbar-left h1 {
@@ -51,20 +48,7 @@
   transition: var(--transition);
 }
 
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 6rem;
-  background-color: rgba(var(--bg-secondary-rgb), 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
+/* Navigation styles */
 
 .logo {
   text-decoration: none;
@@ -91,8 +75,9 @@
 
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+  padding: 18rem;
 }
 
 .nav-item {
@@ -105,6 +90,7 @@
   position: relative;
   transition: all 0.3s ease;
   font-size: 1rem;
+  
 }
 
 .nav-item:hover {
@@ -140,13 +126,23 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  margin-left: auto;
+  padding-left: 2rem;
 }
 
 .theme-toggle,
 .github-link {
+  background: none;
+  border: none;
   color: var(--text-primary);
-  font-size: 1.3rem;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   opacity: 0.8;
 }
@@ -154,8 +150,9 @@
 .theme-toggle:hover,
 .github-link:hover {
   opacity: 1;
-  transform: translateY(-2px);
+  transform: scale(1.1);
   color: var(--accent-color);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 
 @media (max-width: 768px) {
@@ -194,39 +191,22 @@
   }
 }
 
-.theme-toggle,
-.github-link {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  color: #666;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-}
-
-.theme-toggle:hover,
-.github-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #333;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .topbar {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     height: 60px;
   }
 
-  .topbar-left h1 {
-    font-size: 1.2rem;
+  .nav-menu {
+    gap: 1rem;
   }
-}
-
-@media (max-width: 480px) {
-  .topbar {
-    padding: 0 1rem;
-    height: 55px;
+  
+  .nav-item span {
+    display: none;
+  }
+  
+  .logo h2 {
+    font-size: 1.5rem;
   }
 }
