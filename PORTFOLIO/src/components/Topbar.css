@@ -1,23 +1,27 @@
 .topbar {
-  background-color: rgba(18, 18, 18, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
+  position: fixed;
+  top: 1rem;       /* Gap from top */
+  left: 5rem;      /* Gap from left */
+  right: 5rem;     /* Gap from right */
+  z-index: 10;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px; /* Adjusted height for better visibility */
+  height: 100px; /* Height of the topbar */
 
-  position: fixed;
-  top: 1rem; /* Pull it slightly down */
-  left: 1rem;
-  right: 1rem;
-  z-index: 10;
+  background-color: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-  border-radius: 16px; /* ✅ Rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Optional shadow for lift */
+  padding: 1rem 2rem;
+  border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  max-width: calc(100% - 2rem); /* Ensures it doesn't overflow */
+  margin: 0 auto;
 }
+
 
 
 .topbar-content-wrapper { /* New style for content wrapper */
@@ -67,6 +71,8 @@
 .logo {
   text-decoration: none;
   transition: all 0.3s ease;
+  padding-right: 10rem;
+  padding-left: 6rem;
 }
 
 .logo h2 {
@@ -80,6 +86,7 @@
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.5px;
   transition: all 0.3s ease;
+  ;
 }
 
 .logo:hover h2 {
@@ -177,7 +184,7 @@
   }
 
   .nav-menu {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .nav-item span {
