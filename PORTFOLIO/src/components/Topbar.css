@@ -1,21 +1,24 @@
 .topbar {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center the wrapper horizontally */
-  position: fixed;
-  top: 0;
-  left: 0;  
-  width: 100%; /* Ensure topbar spans full width */
-  height: 80px; /* Adjust height for better fit */
-  padding: 0 2rem; /* Consistent padding from screen edges */
-  background-color: rgba(var(--bg-secondary-rgb), 0.7); /* Transparent background with rgba */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark theme */
+  background-color: rgba(18, 18, 18, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1); /* Subtle border */
-  border-radius: 0; /* Remove rounded corners to fit full width */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Adjusted height for better visibility */
+
+  position: fixed;
+  top: 1rem; /* Pull it slightly down */
+  left: 1rem;
+  right: 1rem;
+  z-index: 10;
+
+  border-radius: 16px; /* ✅ Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Optional shadow for lift */
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 
 .topbar-content-wrapper { /* New style for content wrapper */
   display: flex;

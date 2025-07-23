@@ -1,15 +1,14 @@
-/* Global Reset and Variables */
 :root {
   --primary-color: #4f46e5;
   --primary-hover: #4338ca;
   --bg-gradient: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
-  --text-primary: #ffffff; /* Changed for dark theme */
-  --text-secondary: #a0a0a0; /* Changed for dark theme */
-  --bg-primary: #0a0a0a; /* Changed for dark theme */
-  --bg-secondary: #121212; /* Changed for dark theme */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3); /* Adjusted for dark theme */
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4); /* Adjusted for dark theme */
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5); /* Adjusted for dark theme */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
   --transition: all 0.3s ease;
 }
 
@@ -17,12 +16,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
-body {
+body, html {
   width: 100%;
   min-height: 100vh;
+  background: var(--bg-primary);
   overflow-x: hidden;
 }
 
@@ -33,16 +32,14 @@ body {
   flex-direction: column;
 }
 
-/* Dashboard Layout */
 .dashboard {
   display: flex;
   min-height: 100vh;
   background-color: var(--bg-primary);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-primary);
 }
 
-/* Sidebar Styles */
 .sidebar {
   width: 250px;
   background: var(--bg-gradient);
@@ -53,110 +50,35 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
-  transition: var(--transition);
 }
 
-.sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.sidebar nav a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.sidebar nav a i {
-  font-size: 1.1rem;
-}
-
-.sidebar nav a.active,
-.sidebar nav a:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(5px);
-}
-
-/* Main Area */
-.main-content { /* Changed from .main to .main-content as per Dashboard.jsx */
+.main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center; /* ✅ Important */
+  padding-top: 120px;
+  width: 100%;
   background-color: var(--bg-primary);
-  padding-top: 80px; /* Account for fixed topbar */
-  /* Removed align-items: center; to allow child components to self-center */
-  width: 100%; /* Ensure it takes full width to allow child auto margins to work */
 }
 
-/* Topbar */
 .topbar {
-  background-color: rgba(var(--bg-secondary-rgb), 0.7); /* Transparent background */
+  width: 95%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 1rem 2rem;
-  border-bottom: none; /* Remove border-bottom as it's handled by main Topbar.css */
-  box-shadow: none; /* Remove shadow as it's handled by main Topbar.css */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(10px); /* Apply blur */
-  -webkit-backdrop-filter: blur(10px);
-  margin-top: 0; /* Remove negative margin */
-  width: 100%; /* Ensure full width */
-  border-width: 0; /* Remove border-width */
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
-.topbar h1 {
-  font-size: 1.8rem;
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-/* Dashboard Pages */
-section {
-  padding: 2rem;
-  margin: 1.5rem;
-  background-color: var(--bg-secondary);
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-}
-
-section:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-
-section h2 {
-  margin-bottom: 1.5rem;
-  color: var(--text-primary);
-  font-size: 1.75rem;
-  font-weight: 600;
-}
-
-section p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .sidebar {
     width: 80px;
@@ -179,11 +101,6 @@ section p {
 
   .sidebar nav a i {
     font-size: 1.25rem;
-  }
-
-  section {
-    margin: 1rem;
-    padding: 1.5rem;
   }
 }
 
