@@ -4,6 +4,20 @@ import './Overview.css';
 const Overview = () => {
   return (
     <div className="overview">
+      {/* Container for the new animated background */}
+      <div className="background-shapes">
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+        <li className="shape"></li>
+      </div>
+
       <section className="hero">
         <h1>Welcome to My Portfolio</h1>
         <p className="subtitle">Frontend Developer | React Enthusiast | Computer Science Student</p>
@@ -80,3 +94,4 @@ const Overview = () => {
 };
 
 export default Overview;
+

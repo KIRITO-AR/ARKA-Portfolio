@@ -1,160 +1,220 @@
-/* Landing page styles */
+/* --- Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Main Landing Section --- */
 .landing {
-  height: 100vh;
-  background: linear-gradient(to right, #4b6cb7, #182848); /* Blue gradient */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
+    height: 100vh;
+    /* New, darker gradient background */
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden; /* Crucial for containing absolute elements */
 }
 
-/* Waves effect */
-.waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  min-width: 100vw;
+/* --- Animated Aurora/Nebula Background --- */
+.landing::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+        radial-gradient(circle at center, rgba(120, 81, 169, 0.3) 0%, transparent 40%), /* Purple */
+        radial-gradient(circle at center, rgba(64, 224, 208, 0.3) 0%, transparent 40%), /* Turquoise */
+        radial-gradient(circle at center, rgba(255, 105, 180, 0.3) 0%, transparent 40%); /* Pink */
+    background-size: 33% 33%, 33% 33%, 33% 33%;
+    background-position: 0% 50%, 50% 50%, 100% 50%;
+    animation: aurora 30s linear infinite;
+    z-index: 0;
 }
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat-x;
-  animation: wave-animation 10s linear infinite;
+@keyframes aurora {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.wave-1 {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='rgba(255, 255, 255, 0.2)'/%3E%3C/svg%3E");
-  opacity: 0.5;
-  z-index: 3;
-}
 
-.wave-2 {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='rgba(255, 255, 255, 0.3)'/%3E%3C/svg%3E");
-  opacity: 0.75;
-  z-index: 2;
-  animation-delay: -2s;
-  animation-duration: 12s;
-}
-
-.wave-3 {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='rgba(255, 255, 255, 0.4)'/%3E%3C/svg%3E");
-  opacity: 0.5;
-  z-index: 1;
-  animation-delay: -4s;
-  animation-duration: 15s;
-}
-
-/* Bubbles effect */
-.bubbles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
+/* --- Content Styling --- */
 .landing h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  position: relative;
-  z-index: 10;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    /* For typing effect */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #00f2ea; /* The cursor */
+    animation:
+        typing 8s steps(30, end) infinite,
+        blink-caret .70s step-end infinite;
 }
+
+/* Typing effect */
+@keyframes typing {
+  0% { width: 0 }
+  80%, 100% { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00f2ea; }
+}
+
 
 .landing p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 10;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+    font-weight: 300;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .landing button {
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  background-color: #ffffff;
-  color: #182848;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .landing button:hover {
-  background-color: #dbeafe;
-  transform: scale(1.05);
+    background-color: #ffffff;
+    color: #16222A;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Wave animation */
-@keyframes wave-animation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* --- Footer --- */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
 }
 
-/* Bubble styles and animations */
-.bubble {
-  position: absolute;
-  bottom: -100px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  animation: bubble-rise 15s infinite;
-  opacity: 0;
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.bubble::before {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+.footer a:hover {
+    color: #ffffff;
 }
 
-@keyframes bubble-rise {
-  0% {
-    bottom: -100px;
-    transform: translateX(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    bottom: 100vh;
-    transform: translateX(-200px);
-    opacity: 0;
-  }
+/* --- Gemini Modal Styles --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
 }
 
-/* Generate multiple bubbles with different sizes and animations */
-.bubble:nth-child(1) { left: 10%; width: 30px; height: 30px; animation-delay: 0s; }
-.bubble:nth-child(2) { left: 20%; width: 45px; height: 45px; animation-delay: 2s; }
-.bubble:nth-child(3) { left: 35%; width: 25px; height: 25px; animation-delay: 4s; }
-.bubble:nth-child(4) { left: 50%; width: 35px; height: 35px; animation-delay: 6s; }
-.bubble:nth-child(5) { left: 65%; width: 40px; height: 40px; animation-delay: 8s; }
-.bubble:nth-child(6) { left: 80%; width: 28px; height: 28px; animation-delay: 10s; }
-.bubble:nth-child(7) { left: 90%; width: 32px; height: 32px; animation-delay: 12s; }
+.modal-content {
+    /* Updated modal gradient to match new theme */
+    background: linear-gradient(to right, #0f172a, #000000);
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#gemini-result {
+    min-height: 50px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Loader --- */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
