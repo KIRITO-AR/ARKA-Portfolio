@@ -9,7 +9,7 @@ const Landing = () => {
     <div className="landing">
       <h1>Welcome to Arkaprava's Portfolio</h1>
       <p>Full Stack Developer | Problem Solver | Creative Thinker | AI/ML | Automation</p>
-      <button onClick={() => navigate('/dashboard')}>Go to Dashboard</button>
+      <button onClick={() => navigate('/dashboard')}>KNOW Me</button>
       
       {/* Waves effect */}
       <div className="waves">

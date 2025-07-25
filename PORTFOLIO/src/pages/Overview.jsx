@@ -3,7 +3,7 @@ import './Overview.css';
 
 const Overview = () => {
   return (
-    // Use a React Fragment to return multiple root elements
+    
     <>
       {/* This container is now a sibling to the main content and is styled by the fixed position CSS */}
       <div className="background-shapes">
