@@ -73,26 +73,36 @@
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.05); /* Adjusted for dark theme */
-  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  
 }
 
 .social-links a {
+  /* For creating a perfect circle */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem; /* Set a fixed width */
+  height: 3.5rem; /* Set a fixed height */
+  border-radius: 50%; /* Correct value for a circle */
+   padding: 0; /* No padding needed for a circle */
+   margin-left: 1rem;
+   margin-right: auto;
   color: var(--text-secondary);
-  font-size: 1.75rem;
-  transition: var(--transition);
-  padding: 0.75rem;
-  border-radius: 50%;
-  background: rgba(79, 70, 229, 0.03); /* Adjusted for dark theme */
+  font-size: 1.5rem; /* Adjusted for the new box size */
+  background: rgba(79, 70, 229, 0.03);
+  transition: all 0.3s ease; /* Using a more explicit transition */
 }
 
+/* --- Added a hover effect for interactivity --- */
 .social-links a:hover {
-  color: var(--primary-color);
-  background: rgba(79, 70, 229, 0.1); /* Adjusted for dark theme */
-  transform: translateY(-5px);
+  color: #fff; /* Example: Brighter color on hover */
+  background: rgba(79, 70, 229, 0.1); /* Darker background on hover */
+  transform: translateY(-3px); /* Add a subtle lift effect */
 }
 
 .contact-form {

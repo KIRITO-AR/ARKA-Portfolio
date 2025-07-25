@@ -61,7 +61,7 @@ const Contact = () => {
             <a href="https://github.com/KIRITO-AR" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/arkaprava-sen-450b19220" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/arkaprava-das-450b19220" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>
             <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link">
