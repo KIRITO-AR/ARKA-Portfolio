@@ -15,11 +15,30 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://arkapravad.app.n8n.cloud/webhook/5d981bc2-dae1-4c53-9724-5af4d8d4aae2", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      setFormData({ name: '', email: '', message: '' }); // clear form
+    } else {
+      alert("Failed to send message. Please try again later.");
+    }
+  } catch (error) {
+    console.error("Error sending message:", error);
+    alert("Error sending message. Try again.");
+  }
+};
+
 
   return (
     <div className="contact">
