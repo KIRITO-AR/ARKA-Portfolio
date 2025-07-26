@@ -1,0 +1,20 @@
+.galaxy-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Keep at 0 for proper rendering */
+  overflow: hidden;
+}
+
+/* Ensure the appended canvas fills the parent and stays behind */
+.galaxy-container canvas {
+  position: relative !important; /* Keep as relative for proper WebGL rendering */
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: auto; /* Allow mouse interaction with galaxy */
+}
