@@ -1,6 +1,8 @@
 .projects {
-  padding: 2rem;
+  padding: 2rem 0; /* Adjusted vertical padding, removed horizontal */
   animation: fadeIn 0.5s ease-out;
+  max-width: 1200px; /* Max width for centering */
+  margin: 0 auto; /* Center the projects container */
 }
 
 .projects h1 {
@@ -15,8 +17,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1200px; /* Max width for grid itself */
+  margin: 0 auto; /* Center the grid */
 }
 
 .project-card {
@@ -74,7 +76,7 @@
 }
 
 .tech-tag {
-  background: rgba(79, 70, 229, 0.1);
+  background: rgba(79, 70, 229, 0.1); /* Adjusted for dark theme */
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -84,7 +86,7 @@
 }
 
 .tech-tag:hover {
-  background: rgba(79, 70, 229, 0.15);
+  background: rgba(79, 70, 229, 0.15); /* Adjusted for dark theme */
   transform: translateY(-2px);
 }
 
@@ -92,7 +94,7 @@
   display: flex;
   gap: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05); /* Adjusted for dark theme */
 }
 
 .project-links a {
@@ -109,7 +111,7 @@
 
 .project-links a:hover {
   color: var(--primary-color);
-  background: rgba(79, 70, 229, 0.1);
+  background: rgba(79, 70, 229, 0.1); /* Adjusted for dark theme */
 }
 
 .project-links i {

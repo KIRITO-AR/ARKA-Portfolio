@@ -1,6 +1,7 @@
 import React from 'react';
 import './Overview.css';
 
+
 const Overview = () => {
   return (
     
@@ -52,7 +53,7 @@ const Overview = () => {
                 <div className="key-points">
                   <div className="key-point">
                     <i className="fas fa-laptop-code"></i>
-                    <span>Frontend Development</span>
+                    <span>Full Stack Development</span>
                   </div>
                   <div className="key-point">
                     <i className="fas fa-mobile-alt"></i>
@@ -66,7 +67,8 @@ const Overview = () => {
               </div>
               <div className="about-image">
                 <div className="image-container">
-                  <img src="/assets/profile.jpg" alt="Arkaprava" className="profile-image" />
+                 
+                <img src="/assets/arka.jpeg" alt="Arkaprava" className="profile-image" /> 
                 </div>
               </div>
             </div>
