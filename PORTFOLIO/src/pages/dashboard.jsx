@@ -5,7 +5,7 @@ import Overview from './Overview';
 import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
-import './Dashboard.css';
+import './dashboard.css';
 
 const Dashboard = () => {
   return (
