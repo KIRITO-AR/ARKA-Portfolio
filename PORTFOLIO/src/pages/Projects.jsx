@@ -11,11 +11,11 @@ const Projects = () => {
       live: '#'
     },
     {
-      title: 'News Web App',
-      description: 'A news application that fetches and displays news articles from various sources using News API.',
+      title: 'eBook',
+      description: 'Library based website with database and vast dataset of book.',
       tech: ['React', 'News API', 'Bootstrap', 'JavaScript'],
-      github: 'https://github.com/KIRITO-AR/NEWS-APP',
-      live: '#'
+      github: 'https://github.com/KIRITO-AR/ebook.git',
+      live: 'https://kirito-ar.github.io/ebook/'
     },
     {
       title: 'TextUtils',
