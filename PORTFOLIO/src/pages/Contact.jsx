@@ -19,7 +19,7 @@ const Contact = () => {
   e.preventDefault();
 
   try {
-    const response = await fetch("https://arkapravad.app.n8n.cloud/webhook/5d981bc2-dae1-4c53-9724-5af4d8d4aae2", {
+    const response = await fetch("http://localhost:5678/webhook/5d981bc2-dae1-4c53-9724-5af4d8d4aae2", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
