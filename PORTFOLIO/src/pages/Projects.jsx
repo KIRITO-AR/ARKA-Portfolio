@@ -18,18 +18,18 @@ const Projects = () => {
       live: 'https://kirito-ar.github.io/ebook/'
     },
     {
-      title: 'TextUtils',
-      description: 'A text utility application with features like text transformation, word counting, and character analysis.',
-      tech: ['React', 'JavaScript', 'Bootstrap'],
-      github: 'https://github.com/KIRITO-AR/TextUtils-React',
-      live: '#'
+      title: 'JiNsX-AI BOT' ('Verified by discord'),
+      description: 'JiNsX Ai is a multifaceted AI companion designed to transform your Discord server into a dynamic and intelligent community hub. Go beyond simple commands with a creative powerhouse that generates stunning AI art, music, and memes. Leverage it as a productivity tool to summarize webpages, analyze data, and get real-time answers from the web. Enhance your community with intelligent moderation, interactive games, and a unique personality system that remembers users and conversations for a truly personalized experience. From utility to entertainment, JiNsX Ai is the ultimate all-in-one bot for your server.',
+      tech: ['python', 'Discord API', 'Gemini', 'Supabase', 'PostgreSQL'],
+      github: 'https://github.com/KIRITO-AR/JiNsX-Ai-discord-bot.git',
+      live: 'https://ji-ns-x-ai-web.vercel.app/'
     },
     {
-      title: 'iNotebook',
-      description: 'A full-stack note-taking application with user authentication and CRUD operations.',
-      tech: ['MERN Stack', 'JWT', 'Bootstrap'],
-      github: 'https://github.com/KIRITO-AR/inotebook',
-      live: '#'
+      title: 'Quantum AI',
+      description: 'A full-stack a full stack web chatbot ai integrated with n8n automation.',
+      tech: ['MERN Stack', 'REACT', 'MongoDB', 'n8n'],
+      github: 'https://github.com/KIRITO-AR/Quntambot.AI.git',
+      live: 'https://quntambot-ai.vercel.app/'
     }
   ];
 
